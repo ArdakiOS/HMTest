@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @State var percentage: CGFloat = 25
     var body: some View {
         ZStack{
-            Image("BG")
-                .aspectRatio(contentMode: .fill)
-                .ignoresSafeArea()
-            
-            
+            if percentage == 100{
+                NavigationPage()
+            }
+            else{
+                Image("BG")
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea()
+                
+                CustomProgressView(percentage: $percentage)
+            }
         }
         
     }

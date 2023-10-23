@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct TopModel : Hashable{
+    var pos : String
+    var country : String
+    var name : String
+    var deposit : String
+    var profit : String
+}

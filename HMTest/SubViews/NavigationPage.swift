@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct NavigationPage: View {
-    @State var selectedTab = MyTabs.Top
+    @State var selectedTab = MyTabs.Trade
     var body: some View {
-        VStack{
-            TabView(selection: $selectedTab){
-                Trade()
-                    .tag(MyTabs.Trade)
+        NavigationStack {
+            VStack(spacing: 0){
+                TabView(selection: $selectedTab){
+                    Trade()
+                        .tag(MyTabs.Trade)
+                    
+                    Top()
+                        .tag(MyTabs.Top)
+                }
                 
-                Top()
-                    .tag(MyTabs.Top)
+                NavigationTabBar(selectedTab: $selectedTab)
             }
-            
-            NavigationTabBar(selectedTab: $selectedTab)
-        }
-        .background(
-            Color.init(red: 32/255, green: 35/255, blue: 47/255)
+            .background(
+                Color.init(red: 32/255, green: 35/255, blue: 47/255)
         )
+        }
     }
 }
 

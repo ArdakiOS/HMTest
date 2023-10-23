@@ -51,8 +51,8 @@ struct NavigationTabBar: View {
                 }
             }
         }
-        .padding(.bottom)
-        .frame(width: 375, height: 96)
+        .padding(.top)
+        .frame(width: 375)
         .frame(maxWidth: .infinity)
         .background(
             Color.init(red: 46/255, green: 50/255, blue: 65/255)
