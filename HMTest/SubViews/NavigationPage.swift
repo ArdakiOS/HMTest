@@ -9,6 +9,17 @@ import SwiftUI
 
 struct NavigationPage: View {
     @State var selectedTab = MyTabs.Trade
+    
+    let center = UNUserNotificationCenter.current()
+        
+        init() {
+            center.requestAuthorization(options: [.sound , .alert , .badge ], completionHandler: { (granted, error) in
+                if let error = error {
+                    // Handle the error here.
+                }
+                // Enable or disable features based on the authorization.
+            })
+        }
     var body: some View {
         NavigationStack {
             VStack(spacing: 0){

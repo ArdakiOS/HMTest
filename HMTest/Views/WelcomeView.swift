@@ -11,10 +11,10 @@ struct WelcomeView: View {
     @State var percentage: CGFloat = 25
     var body: some View {
         ZStack{
-            if percentage == 100{
-                NavigationPage()
-            }
-            else{
+            
+            NavigationPage()
+            
+            if(percentage != 100){
                 Image("BG")
                     .aspectRatio(contentMode: .fill)
                     .ignoresSafeArea()

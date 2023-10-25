@@ -28,18 +28,18 @@ struct CustomProgressView: View {
                     .foregroundColor(.white)
                     .bold()
             )
+            .animation(.bouncy, value: percentage)
             .onReceive(timer, perform: { _ in
-                withAnimation(.linear){
-                    if percentage<100{
-                        if percentage>90{
-                            
-                            percentage += 100 - percentage
-                        }
-                        else{
-                            percentage += CGFloat(Int.random(in: (0...10)))
-                        }
+                if percentage<100{
+                    if percentage>90{
+                        
+                        percentage += 100 - percentage
+                    }
+                    else{
+                        percentage += CGFloat(Int.random(in: (0...10)))
                     }
                 }
+                
             })
     }
 }

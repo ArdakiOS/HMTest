@@ -19,6 +19,8 @@
 		98CEFCF52AE6B9F000898B38 /* TopPageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CEFCF42AE6B9F000898B38 /* TopPageRow.swift */; };
 		98CEFCF72AE6BABF00898B38 /* TopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CEFCF62AE6BABF00898B38 /* TopModel.swift */; };
 		98CEFCF92AE6D76500898B38 /* SelectPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CEFCF82AE6D76500898B38 /* SelectPair.swift */; };
+		98CEFCFB2AE7B4AB00898B38 /* CustomWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CEFCFA2AE7B4AB00898B38 /* CustomWebView.swift */; };
+		98CEFCFE2AE7C6A000898B38 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CEFCFD2AE7C6A000898B38 /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		98CEFCF42AE6B9F000898B38 /* TopPageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPageRow.swift; sourceTree = "<group>"; };
 		98CEFCF62AE6BABF00898B38 /* TopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopModel.swift; sourceTree = "<group>"; };
 		98CEFCF82AE6D76500898B38 /* SelectPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPair.swift; sourceTree = "<group>"; };
+		98CEFCFA2AE7B4AB00898B38 /* CustomWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWebView.swift; sourceTree = "<group>"; };
+		98CEFCFD2AE7C6A000898B38 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		98CEFCFF2AE7CA6000898B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		98CEFD002AE7CA7D00898B38 /* HMTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HMTest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,9 @@
 		98CEFCD62AE6A77800898B38 /* HMTest */ = {
 			isa = PBXGroup;
 			children = (
+				98CEFD002AE7CA7D00898B38 /* HMTest.entitlements */,
+				98CEFCFF2AE7CA6000898B38 /* Info.plist */,
+				98CEFCFC2AE7C69000898B38 /* Extensions */,
 				98CEFCF32AE6B9D600898B38 /* SubViews */,
 				98CEFCE72AE6A89A00898B38 /* Views */,
 				98CEFCE62AE6A89300898B38 /* ViewModels */,
@@ -119,8 +128,17 @@
 				98CEFCE92AE6A8D500898B38 /* CustomProgressView.swift */,
 				98CEFCEB2AE6AF5700898B38 /* NavigationPage.swift */,
 				98CEFCF42AE6B9F000898B38 /* TopPageRow.swift */,
+				98CEFCFA2AE7B4AB00898B38 /* CustomWebView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		98CEFCFC2AE7C69000898B38 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98CEFCFD2AE7C6A000898B38 /* Extentions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +219,9 @@
 				98CEFCD82AE6A77800898B38 /* HMTestApp.swift in Sources */,
 				98CEFCEA2AE6A8D500898B38 /* CustomProgressView.swift in Sources */,
 				98CEFCF92AE6D76500898B38 /* SelectPair.swift in Sources */,
+				98CEFCFE2AE7C6A000898B38 /* Extentions.swift in Sources */,
 				98CEFCEE2AE6B14C00898B38 /* NavigationTabBar.swift in Sources */,
+				98CEFCFB2AE7B4AB00898B38 /* CustomWebView.swift in Sources */,
 				98CEFCF22AE6B67F00898B38 /* Top.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,14 +353,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HMTest/HMTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HMTest/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HMTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -361,14 +382,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HMTest/HMTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HMTest/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HMTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

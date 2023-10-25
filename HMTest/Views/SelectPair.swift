@@ -10,9 +10,9 @@ import SwiftUI
 struct SelectPair: View {
     var pairs : [[String]] = [
         
-        ["EUR/USD", "GBP/USD"],
+        ["BTC/USD", "GBP/USD"],
+        ["ETH/USD", "EUR/USD"],
         ["EUR/USD", "EUR/USD"],
-        ["BTC/USD", "EUR/USD"],
         ["EUR/USD", "EUR/USD"],
         ["EUR/USD", "EUR/USD"],
         ["EUR/USD", "EUR/USD"],
@@ -41,7 +41,7 @@ struct SelectPair: View {
                             .bold()
                     }
                     .padding(.leading)
-
+                    
                 }
                 .padding(.bottom, 25)
                 VStack(spacing : 25){
@@ -49,7 +49,6 @@ struct SelectPair: View {
                         HStack(spacing : 40){
                             ForEach(row, id:\.self){pair in
                                 Text(pair)
-                                
                                     .frame(width: 140, height: 54)
                                     .background(
                                         RoundedRectangle(cornerRadius: 12).fill(selectedPair == pair ? Color.green : Color.init(red: 51/255, green: 55/255, blue: 73/255))

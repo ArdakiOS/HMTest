@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct HMTestApp: App {
+    
     var body: some Scene {
         WindowGroup {
             WelcomeView()
